@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdfbf7;
+    background-color: #f4e1c6; /* Marrón clarito pastel */
     margin: 0;
     padding: 20px;
 }
@@ -8,60 +8,60 @@ body {
 h1 {
     text-align: center;
     color: #5a4634;
-    margin-bottom: 20px;
 }
 
 .malla {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
 }
 
 .anio {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .anio h2 {
-    text-align: center;
-    background-color: #e9e4da;
-    padding: 5px;
-    border-radius: 6px;
+    color: #7b5e3b;
+    margin-bottom: 5px;
 }
 
+/* Botones base */
 .ramo {
-    padding: 10px 12px;
+    padding: 10px;
+    border: none;
     border-radius: 8px;
     font-size: 14px;
-    border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-/* Bloqueado */
+/* Bloqueadas */
 .bloqueado {
-    background-color: #d9d9d9;
-    color: #6e6e6e;
+    background-color: #cccccc; /* Gris */
+    color: #555;
     cursor: not-allowed;
+    opacity: 0.6;
 }
 
-/* Cursada */
-.cursada {
-    background-color: #d4e5d2; /* verde pastel claro */
-    color: #2f4f2f;
-}
-
-/* Final */
-.final {
-    background-color: #8ca68a; /* verde pantano pastel */
+/* Colores por estado */
+.verde-final {
+    background-color: #6b8f71; /* Verde pantano */
     color: white;
 }
 
-/* Primer año siempre final */
-.anio:first-child .ramo.final {
-    background-color: #8ca68a; /* verde pantano pastel oscuro */
+.verde-pastel {
+    background-color: #a3c9a8; /* Verde pastel intermedio */
+    color: #2f4f2f;
 }
 
+.cursada {
+    background-color: #a3c9a8 !important; /* Verde pastel */
+    color: #2f4f2f;
+}
+
+.final {
+    background-color: #6b8f71 !important; /* Verde pantano */
+    color: white;
+}
