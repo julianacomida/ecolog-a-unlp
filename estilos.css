@@ -1,1 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfbf7;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #5a4634;
+    margin-bottom: 20px;
+}
+
+.malla {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.anio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.anio h2 {
+    text-align: center;
+    background-color: #e9e4da;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.ramo {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Bloqueado */
+.bloqueado {
+    background-color: #d9d9d9;
+    color: #6e6e6e;
+    cursor: not-allowed;
+}
+
+/* Cursada */
+.cursada {
+    background-color: #d4e5d2; /* verde pastel claro */
+    color: #2f4f2f;
+}
+
+/* Final */
+.final {
+    background-color: #8ca68a; /* verde pantano pastel */
+    color: white;
+}
+
+/* Primer año siempre final */
+.anio:first-child .ramo.final {
+    background-color: #8ca68a; /* verde pantano pastel oscuro */
+}
 
